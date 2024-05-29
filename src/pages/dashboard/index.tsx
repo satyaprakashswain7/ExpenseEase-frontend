@@ -20,7 +20,7 @@ export const Dashboard = () => {
         <div className="dashboard-container">
             <h1>Welcome {user?.firstName}! Here are your Finances</h1> 
             <FinancialRecordForm/>
-            <div style={{display: "flex",justifyContent: "center",fontFamily: "inherit",fontWeight: "bold",fontSize: "20px",color: 'GrayText'}}>Total Monthly:₹{totalMonthly}</div>
+            <div style={{display: "flex",justifyContent: "center",fontWeight: "bold",fontSize: "20px",color: 'GrayText'}}>Total Monthly:₹{totalMonthly}</div>
             <FinancialRecordList/>
         </div>
     )
