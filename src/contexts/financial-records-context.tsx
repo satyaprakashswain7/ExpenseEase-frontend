@@ -2,7 +2,7 @@ import { useUser } from "@clerk/clerk-react"
 import { createContext, useContext, useEffect } from "react"
 import { useState } from "react"
 
-const port = import.meta.env.VITE_PORT
+const port = import.meta.env.VITE_PORT || 3000
 console.log(port);
 
 
