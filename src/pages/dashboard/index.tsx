@@ -27,10 +27,14 @@ export const Dashboard = () => {
         </div>
         </SignedIn>
 
-        <SignedOut>
-            <h1>Welcome to ExpenseEase - Finance Tracker!</h1>
-            <SignUpButton mode="modal"/>
-            <SignInButton mode="modal"/>
+        <SignedOut >
+            <div className="signed-out-page">
+                <h1>Welcome to ExpenseEase - Finance Tracker!</h1>
+                <div className="signed-out-button">
+                    <SignUpButton mode="modal"/>
+                    <SignInButton mode="modal"/>
+                </div>
+            </div>
         </SignedOut>
         </div>
     )

@@ -11,6 +11,7 @@ function App() {
     <Router>
       <div className='app-container'>
         <div className='navbar'>
+          <h2>ExpenseEase-Track your Expenses</h2>
           <Link to="/">Dashboard</Link>
           <SignedIn>
             <UserButton />

@@ -1,6 +1,6 @@
 /* Centered container for the app */
 .dashboard-container {
-    width: 80%;
+    width: 100%;
   }
   
   /* General styling for headers within the app */
@@ -96,4 +96,12 @@
   
   .table tbody tr:hover {
     background-color: #e8f4f8; /* Light blue hover effect for rows */
+  }
+
+  .signed-out-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 80px;
+    gap: 20px;
   }
