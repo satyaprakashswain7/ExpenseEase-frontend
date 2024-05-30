@@ -9,6 +9,10 @@ export const Dashboard = () => {
     const { user } = useUser();
     const { records } = useFinancialRecords()
 
+    if(!user){
+        return <div>No user present in clerk</div>
+    }
+
     const totalMonthly = useMemo(() => {
         let totalAmount = 0;
         records.forEach((record) => {
