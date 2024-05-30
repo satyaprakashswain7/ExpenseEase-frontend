@@ -1,4 +1,4 @@
-import { useUser } from "@clerk/clerk-react"
+import { SignedIn,SignedOut,SignInButton,SignUpButton, useUser } from "@clerk/clerk-react"
 import { FinancialRecordForm } from "./financial-record-form";
 import { FinancialRecordList } from "./financial-record-list";
 import { useFinancialRecords } from "../../contexts/financial-records-context";
@@ -17,11 +17,21 @@ export const Dashboard = () => {
         return totalAmount
     },[records])
     return (
+        <div>
+        <SignedIn>
         <div className="dashboard-container">
             <h1>Welcome {user?.firstName}! Here are your Finances</h1> 
             <FinancialRecordForm/>
             <div style={{display: "flex",justifyContent: "center",fontWeight: "bold",fontSize: "20px",color: 'GrayText'}}>Total Monthly:₹{totalMonthly}</div>
             <FinancialRecordList/>
+        </div>
+        </SignedIn>
+
+        <SignedOut>
+            <h1>Welcome to ExpenseEase - Finance Tracker!</h1>
+            <SignUpButton mode="modal"/>
+            <SignInButton mode="modal"/>
+        </SignedOut>
         </div>
     )
 }
